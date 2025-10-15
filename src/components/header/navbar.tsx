@@ -2,9 +2,7 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import {
   Menubar,
   MenubarContent,
@@ -24,7 +22,6 @@ import { Search, ChevronDown } from "lucide-react";
 import NavbarMobile from "./navbarMobile";
 
 export default function Navbar() {
-  const pathname = usePathname();
   const [q, setQ] = React.useState("");
 
   return (
@@ -38,7 +35,7 @@ export default function Navbar() {
             aria-label="Go to home"
           >
             <span className="text-2xl font-extrabold tracking-wide text-teal-500 md:text-3xl">
-              SMK M'TRI'
+              SMK M&apos;TRI&apos;
             </span>
           </Link>
 
