@@ -10,7 +10,6 @@ import {
   CardHeader,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Clock, Award, Briefcase } from "lucide-react";
 
 type Competency = {

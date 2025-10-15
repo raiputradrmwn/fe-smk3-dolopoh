@@ -68,7 +68,7 @@ export default function NavbarMobile() {
         <SheetContent side="left" className="w-[88%] sm:w-[380px] p-0">
           <SheetHeader className="px-4 pb-2 pt-4">
             <SheetTitle className="text-left text-xl font-bold text-teal-600">
-              SMK M’TRI’
+              SMK M&apos;TRI&apos;
             </SheetTitle>
 
             {/* Search */}
