@@ -68,10 +68,10 @@ export default function NavbarMobile() {
         <SheetContent side="left" className="w-[88%] sm:w-[380px] p-0">
           <SheetHeader className="px-4 pb-2 pt-4">
             <SheetTitle className="text-left text-xl font-bold text-teal-600">
+              <Link href="/">
               SMK M&apos;TRI&apos;
+              </Link>
             </SheetTitle>
-
-            {/* Search */}
             <form
               action="/search"
               className="relative"
