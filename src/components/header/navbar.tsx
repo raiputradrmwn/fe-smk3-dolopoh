@@ -54,10 +54,6 @@ export default function Navbar() {
                   <MenubarItem asChild>
                     <Link href="/profil/struktur">Struktur Organisasi</Link>
                   </MenubarItem>
-                  <MenubarSeparator />
-                  <MenubarItem asChild>
-                    <Link href="/profil/prestasi">Prestasi</Link>
-                  </MenubarItem>
                 </MenubarContent>
               </MenubarMenu>
 
@@ -69,26 +65,17 @@ export default function Navbar() {
                 </MenubarTrigger>
                 <MenubarContent align="start" sideOffset={10}>
                   <MenubarItem asChild>
-                    <Link href="/kompetensi/tjkt">TJKT</Link>
+                    <Link href="/kompetensi-keahlian/tkro">Teknik Kendaraan Ringan Otomotif</Link>
                   </MenubarItem>
                   <MenubarItem asChild>
-                    <Link href="/kompetensi/pplg">PPLG</Link>
+                    <Link href="/kompetensi-keahlian/dkv">Desain Komunikasi Visual/Komputer</Link>
                   </MenubarItem>
                   <MenubarItem asChild>
-                    <Link href="/kompetensi/dkv">DKV</Link>
+                    <Link href="/kompetensi-keahlian/tsm">Teknik Bisnis Sepeda Motor</Link>
                   </MenubarItem>
-                  <MenubarSeparator />
-                  <MenubarSub>
-                    <MenubarSubTrigger>Program</MenubarSubTrigger>
-                    <MenubarSubContent>
-                      <MenubarItem asChild>
-                        <Link href="/kompetensi/kurikulum">Kurikulum</Link>
-                      </MenubarItem>
-                      <MenubarItem asChild>
-                        <Link href="/kompetensi/pkl">PKL</Link>
-                      </MenubarItem>
-                    </MenubarSubContent>
-                  </MenubarSub>
+                  <MenubarItem asChild>
+                    <Link href="/kompetensi-keahlian/tata-busana">Tata Busana</Link>
+                  </MenubarItem>
                 </MenubarContent>
               </MenubarMenu>
 
@@ -100,15 +87,12 @@ export default function Navbar() {
                 </MenubarTrigger>
                 <MenubarContent align="start" sideOffset={10}>
                   <MenubarItem asChild>
-                    <Link href="/galeri/kegiatan-sekolah">
-                      Kegiatan Sekolah
-                    </Link>
-                  </MenubarItem>
-                  <MenubarItem asChild>
                     <Link href="/galeri/ekstrakurikuler">Ekstrakurikuler</Link>
                   </MenubarItem>
                   <MenubarItem asChild>
-                    <Link href="/galeri/event">Event &amp; Lomba</Link>
+                    <Link href="/galeri/kegiatan-sekolah">
+                      Kegiatan Sekolah
+                    </Link>
                   </MenubarItem>
                 </MenubarContent>
               </MenubarMenu>

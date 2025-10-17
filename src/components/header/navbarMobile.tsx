@@ -87,12 +87,8 @@ export default function NavbarMobile() {
               />
             </form>
           </SheetHeader>
-
           <Separator />
-
-          {/* Menu list */}
           <nav className="px-2 py-3">
-            {/* Profil */}
             <Accordion type="single" collapsible>
               <AccordionItem value="profil" className="border-b-0">
                 <AccordionTrigger className="px-2 py-2 text-base">
@@ -100,31 +96,25 @@ export default function NavbarMobile() {
                 </AccordionTrigger>
                 <AccordionContent className="px-2 pb-2">
                   <NavLink href="/profil/sekolah">Profil Sekolah</NavLink>
-                  <NavLink href="/profil/visi-misi">Visi &amp; Misi</NavLink>
                   <NavLink href="/profil/struktur">Struktur Organisasi</NavLink>
-                  <NavLink href="/profil/prestasi">Prestasi</NavLink>
                 </AccordionContent>
               </AccordionItem>
 
-              {/* Kompetensi Keahlian */}
               <AccordionItem value="kompetensi" className="border-b-0">
                 <AccordionTrigger className="px-2 py-2 text-base">
                   Kompetensi Keahlian
                 </AccordionTrigger>
                 <AccordionContent className="px-2 pb-2">
-                  <NavLink href="/kompetensi/tkro">
+                  <NavLink href="/kompetensi-keahlian/tkro">
                     Teknik Kendaraan Ringan Otomotif
                   </NavLink>
-                  <NavLink href="/kompetensi/dkv">
+                  <NavLink href="/kompetensi-keahlian/dkv">
                     Desain Komunikasi Visual/Komputer
                   </NavLink>
-                  <NavLink href="/kompetensi/tbsm">
+                  <NavLink href="/kompetensi-keahlian/tsm">
                     Teknik Bisnis Sepeda Motor
                   </NavLink>
-                  <NavLink href="/kompetensi/tata-busana">Tata Busana</NavLink>
-                  <Separator className="my-2" />
-                  <NavLink href="/kompetensi/kurikulum">Kurikulum</NavLink>
-                  <NavLink href="/kompetensi/pkl">Program PKL</NavLink>
+                  <NavLink href="/kompetensi-keahlian/tata-busana">Tata Busana</NavLink>
                 </AccordionContent>
               </AccordionItem>
 
@@ -134,11 +124,11 @@ export default function NavbarMobile() {
                   Gallery Kegiatan
                 </AccordionTrigger>
                 <AccordionContent className="px-2 pb-2">
-                  <NavLink href="/galeri/kegiatan-sekolah">
-                    Kegiatan Sekolah
-                  </NavLink>
                   <NavLink href="/galeri/ekstrakurikuler">
                     Ekstrakurikuler
+                  </NavLink>
+                  <NavLink href="/galeri/kegiatan-sekolah">
+                    Kegiatan Sekolah
                   </NavLink>
                   <NavLink href="/galeri/event">Event &amp; Lomba</NavLink>
                 </AccordionContent>
