@@ -25,7 +25,7 @@ export default function Navbar() {
   const [q, setQ] = React.useState("");
 
   return (
-    <div className="sticky top-4 z-50">
+    <div className="sticky top-6 z-50">
       <NavbarMobile />
       <div className="mx-auto hidden max-w-6xl rounded-full border bg-white/30 px-4 py-2 shadow-lg backdrop-blur md:block md:px-6">
         <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-2">

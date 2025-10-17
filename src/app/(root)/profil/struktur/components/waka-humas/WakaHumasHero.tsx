@@ -42,7 +42,7 @@ export default function WakaHumasHero() {
       </div>
 
       {/* Info utama */}
-      <Card className="mx-auto mt-8 max-w-2xl border-gray-200 shadow-sm">
+      <Card className="mx-auto mt-8 max-w-3xl border-gray-200 shadow-sm">
         <CardContent className="p-6">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
             <InfoBox
