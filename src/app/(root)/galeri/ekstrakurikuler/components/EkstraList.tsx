@@ -27,7 +27,7 @@ export default function EkstraList() {
     {
       name: "Tahsin dan Tahfidz Qur'an",
       desc: "Ekstrakurikuler rohis yang mengajarkan membaca dan menghafal Al-Qur'an dengan baik serta membentuk karakter spiritual.",
-      img: "/images/ekskul/tahfidz.png",
+      img: "/images/ekskul/tahsin.png",
     },
 {
       name: "Bulutangkis",
