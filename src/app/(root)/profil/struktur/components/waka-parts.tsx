@@ -15,6 +15,13 @@ import WakaSarprasTeam from "./waka-sarpras/WakaSarprasTeam";
 import WakaKesiswaanHero from "./waka-kesiswaan/WakaKesiswaanHero";
 import WakaKesiswaanPrograms from "./waka-kesiswaan/WakaKesiswaanPrograms";
 import WakaKesiswaanTeam from "./waka-kesiswaan/WakaKesiswaanTeam";
+import WakaKurikulumHero from "./waka-kurikulum/WakaKurikulumHero";
+import WakaKurikulumPrograms from "./waka-kurikulum/WakaKurikulumPrograms";
+import BkHero from "./bk/BkHero";
+import BkTeam from "./bk/BKTeam";
+import BkPrograms from "./bk/BKPrograms";
+import WakaSdmHero from "./waka-sdm/WakaSdmHero";
+import WakaSdmPrograms from "./waka-sdm/WakaSdmPrograms";
 
 export function WakaHumas() {
   return (
@@ -68,10 +75,10 @@ export function WakaKesiswaan() {
 export function WakaKurikulum() {
   return (
     <WakaWrapper title="Kurikulum">
-      <ul className="list-disc pl-5 space-y-1">
-        <li>Perencanaan kurikulum kejuruan & sinkronisasi industri.</li>
-        <li>Supervisi pembelajaran & penilaian.</li>
-      </ul>
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 space-y-10">
+        <WakaKurikulumHero />
+        <WakaKurikulumPrograms />
+      </section>
     </WakaWrapper>
   );
 }
@@ -79,10 +86,11 @@ export function WakaKurikulum() {
 export function WakaBKBp() {
   return (
     <WakaWrapper title="BK/BP">
-      <ul className="list-disc pl-5 space-y-1">
-        <li>Konseling akademik, sosial, dan karier siswa.</li>
-        <li>Pemetaan minat-bakat & intervensi masalah siswa.</li>
-      </ul>
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 space-y-10">
+        <BkHero />
+        <BkTeam />
+        <BkPrograms />
+      </section>
     </WakaWrapper>
   );
 }
@@ -90,10 +98,10 @@ export function WakaBKBp() {
 export function WakaSDM() {
   return (
     <WakaWrapper title="Sumber Daya Manusia">
-      <ul className="list-disc pl-5 space-y-1">
-        <li>Rekrutmen, pengembangan, dan evaluasi kinerja guru/karyawan.</li>
-        <li>Pelatihan & sertifikasi kompetensi pendidik.</li>
-      </ul>
+      <section className="mx-auto max-w-7xl px-4 py-12 md:py-16 space-y-10">
+        <WakaSdmHero />
+        <WakaSdmPrograms />
+      </section>
     </WakaWrapper>
   );
 }

@@ -10,13 +10,10 @@ export type Person = {
   startedAt?: string;
   email?: string;
   phone?: string;
-  section?: string; 
+  section?: string;
   education?: string;
+  nbmNuptk?: string;
 };
-
-/* ==============================
-   KEPALA SEKOLAH
-================================ */
 export const HEADMASTER: Person = {
   id: "kepala-sekolah",
   name: "BAMBANG HARIYADI, S.T., S.Kom., M.Pd",
@@ -26,10 +23,6 @@ export const HEADMASTER: Person = {
   birthDate: "—",
   startedAt: "—",
 };
-
-/* ==============================
-   WAKA (Wakil Kepala Sekolah)
-================================ */
 export const WAKA: Person[] = [
   {
     id: "waka-humas",
@@ -61,7 +54,7 @@ export const WAKA: Person[] = [
     birthDate: "2 Agustus 1998",
     startedAt: "2019",
   },
-{
+  {
     id: "waka-kesiswaan",
     name: "Abdan Syakuro Almahbubi, S.Pd",
     role: "Waka Kesiswaan",
@@ -74,24 +67,23 @@ export const WAKA: Person[] = [
   },
   {
     id: "waka-kurikulum",
-    name: "Nama Waka Kurikulum",
+    name: "Sulthan Abdul Hakim, S.Pd",
     role: "Waka Kurikulum",
     section: "Kurikulum",
-    photo: "/photos/waka-kurikulum.png",
-  },
-  {
-    id: "waka-bkbp",
-    name: "Nama Waka BK/BP",
-    role: "Waka BK/BP",
-    section: "BK/BP",
-    photo: "/photos/waka-bkbp.png",
+    photo: "/photos/kurikulum/waka-kurikulum.png",
+    birthPlace: "Madiun",
+    birthDate: "17 Oktober 1990",
   },
   {
     id: "waka-sdm",
-    name: "Nama Waka SDM",
-    role: "Waka Sumber Daya Manusia",
+    name: "Wahyu Priyo Widodo, S.T.",
+    role: "Waka Sumber Daya Manusia (SDM)",
     section: "SDM",
-    photo: "/photos/waka-sdm.png",
+    photo: "/photos/sdm/waka-sdm.png",
+    birthPlace: "Ponorogo",
+    birthDate: "8 September 1970",
+    education: "S1 Teknik Mesin",
+    startedAt: "06 Juli 2002",
   },
 ];
 export const POKJA_SARPRAS: Person[] = [
@@ -179,67 +171,348 @@ export const POKJA_KESISWAAN: Person[] = [
     startedAt: "2020",
   },
 ];
-/* ==============================
-   TATA USAHA
-================================ */
-export const TATA_USAHA: Person[] = [
+export const BK_TEAM: Person[] = [
   {
-    id: "tu-1",
-    name: "Nama Staf TU 1",
-    role: "Staf Tata Usaha",
-    photo: "/photos/tu/tu-1.png",
+    id: "bk-koordinator",
+    name: "Rengga Setya Widodo, S.Pd",
+    role: "Koordinator BK/BP",
+    section: "BK/BP",
+    photo: "/photos/bk/koor-bk.png",
+    birthPlace: "Madiun",
+    birthDate: "08 November 1993", // sumber menulis 19943, saya normalkan ke 1993
+    startedAt: "2022",
   },
   {
-    id: "tu-2",
-    name: "Nama Staf TU 2",
+    id: "bk-zulfickri",
+    name: "Zulfickri Alwi Jauhari, S.Pd",
+    role: "Guru BK/BP",
+    section: "BK/BP",
+    photo: "/photos/bk/guru-bk1.png",
+    birthPlace: "Madiun",
+    birthDate: "23 November 1992",
+    startedAt: "2018",
+  },
+  {
+    id: "bk-dawatul-anis",
+    name: "Da'watul Anis Ma'rufah, M.Psi",
+    role: "Guru BK/BP",
+    section: "BK/BP",
+    photo: "/photos/bk/guru-bk2.png",
+    birthPlace: "Klaten",
+    birthDate: "24 November 1994",
+    startedAt: "2022",
+  },
+];
+export const TU_STAFF: Person[] = [
+  {
+    id: "tu-nanang",
+    name: "Nanang Mujianto, A.Md",
+    role: "Kepala Tata Usaha",
+    photo: "/photos/tata-usaha/tu-kepala1.png",
+    birthPlace: "Madiun",
+    birthDate: "23 Maret 1987",
+    education: "D3 Teknik Informatika",
+  },
+  {
+    id: "tu-eri",
+    name: "Eri Maya Tika, S.Pd",
     role: "Staf Tata Usaha",
-    photo: "/photos/tu/tu-2.png",
+    photo: "/photos/tata-usaha/tu-staff1.png",
+    birthPlace: "Madiun",
+    birthDate: "13 September 1996",
+    education: "S1 Akuntansi",
+  },
+  {
+    id: "tu-yayan",
+    name: "Yayan Faturrohman, S.Kom",
+    role: "Staf Tata Usaha (ICT)",
+    photo: "/photos/tata-usaha/tu-staff2.png",
+    birthPlace: "Pacitan",
+    birthDate: "18 Desember 1996",
+    education: "S1 Teknik Informatika",
+  },
+  {
+    id: "tu-fevy",
+    name: "Fevy Kusuma Wardani, S.Kom",
+    role: "Staf Tata Usaha",
+    photo: "/photos/tata-usaha/tu-staff3.png",
+    birthPlace: "Ponorogo",
+    birthDate: "20 April 1999",
+    education: "S1 Teknik Informatika",
   },
 ];
 
-/* ==============================
-   GURU (Grouped by Kompetensi)
-================================ */
-export const GURU: Record<string, Person[]> = {
-  "Teknik Kendaraan Ringan Otomotif": [
-    {
-      id: "guru-tkro-1",
-      name: "Nama Guru TKRO 1",
-      role: "Guru TKRO",
-      photo: "/photos/guru/tkro-1.png",
-    },
-    {
-      id: "guru-tkro-2",
-      name: "Nama Guru TKRO 2",
-      role: "Guru TKRO",
-      photo: "/photos/guru/tkro-2.png",
-    },
-  ],
-  "Desain Komunikasi Visual": [
-    {
-      id: "guru-dkv-1",
-      name: "Nama Guru DKV 1",
-      role: "Guru DKV",
-      photo: "/photos/guru/dkv-1.png",
-    },
-  ],
-  "Teknik Sepeda Motor": [
-    {
-      id: "guru-tsm-1",
-      name: "Nama Guru TSM 1",
-      role: "Guru TSM",
-      photo: "/photos/guru/tsm-1.png",
-    },
-  ],
-  "Tata Busana": [
-    {
-      id: "guru-tb-1",
-      name: "Nama Guru Tata Busana 1",
-      role: "Guru Tata Busana",
-      photo: "/photos/guru/tb-1.png",
-    },
-  ],
-};
+
+export const GURU: Person[] = [
+  {
+    id: "guru-bambang",
+    name: "Bambang Hariyadi, S.T., S.Kom., M.Pd",
+    role: "Kepala Sekolah",
+    birthPlace: "Madiun",
+    birthDate: "16 Maret 1972",
+    nbmNuptk: "816783 / 5648750652200022",
+    education: "S1 Teknik Mesin & S1 Teknik Informatika, S2 Pendidikan",
+    photo: "/photos/kepalasekolah.png",
+  },
+  ...WAKA.map((w) => ({
+    ...w,
+    category: "Manajemen Sekolah",
+  })),
+  {
+    id: "guru-imam-nawawi",
+    name: "Imam Nawawi, M.Ag",
+    role: "Guru Kemuhammadiyahan",
+    birthPlace: "Madiun",
+    birthDate: "06 Oktober 1961",
+    nbmNuptk: "941490 / 1942739641200062",
+    education: "S2 Pendidikan Agama Islam",
+    photo: "/photos/man.png",
+  },
+  {
+    id: "guru-heti",
+    name: "Heti Puja Asih, S.Si",
+    role: "Guru Matematika",
+    birthPlace: "Madiun",
+    birthDate: "22 Juni 1972",
+    nbmNuptk: "1035530 / 5954750652300052",
+    education: "S1 Matematika",
+    photo: "/photos/guru/heti.png",
+  },
+  {
+    id: "guru-manto",
+    name: "Manto, S.Pd",
+    role: "Guru Bahasa Indonesia",
+    birthPlace: "Madiun",
+    birthDate: "12 November 1972",
+    nbmNuptk: "1035510 / 0140743645200023",
+    education: "S1 Bahasa Indonesia",
+    photo: "/photos/guru/manto.png",
+  },
+  {
+    id: "guru-nur-fauzan",
+    name: "Nur Fauzan Rozali, S.T.",
+    role: "Guru Informatika",
+    birthPlace: "Madiun",
+    birthDate: "03 Desember 1980",
+    nbmNuptk: "1083425 / 2535758660110053",
+    education: "S1 Teknik Informatika",
+    photo: "/photos/guru/nur-fauzan.png",
+  },
+  {
+    id: "guru-endang",
+    name: "Endang Sri Wahyuningsih, S.Pd",
+    role: "Guru PPKN & Sejarah",
+    birthPlace: "Madiun",
+    birthDate: "23 Agustus 1981",
+    nbmNuptk: "1200082 / 3155759661300013",
+    education: "S1 Statistika",
+    photo: "/photos/ismuba/pokja-ismuba2.png",
+  },
+  {
+    id: "guru-farida",
+    name: "Farida Agus Setyanti, S.Si",
+    role: "Guru IPAS",
+    birthPlace: "Madiun",
+    birthDate: "27 Agustus 1973",
+    nbmNuptk: "996992 / 6159751653300043",
+    education: "S1 Statistika",
+    photo: "/photos/guru/farida.png",
+  },
+  {
+    id: "guru-yani",
+    name: "Yani Indra Gunawan, S.T.",
+    role: "Guru Produktif TKRO",
+    birthPlace: "Ponorogo",
+    birthDate: "10 Januari 1981",
+    nbmNuptk: "194688 / 1442759661110062",
+    education: "S1 Teknik Mesin",
+    photo: "/photos/guru/yani.png",
+  },
+  {
+    id: "guru-winarsih",
+    name: "Winarsih, S.Pd.I",
+    role: "Guru PAI / Al-Islam",
+    birthPlace: "Madiun",
+    birthDate: "11 November 1977",
+    nbmNuptk: "1035530 / 5954750652300052",
+    education: "S1 PAI",
+    photo: "/photos/guru/winarsih.png",
+  },
+  {
+    id: "guru-noviantoni",
+    name: "Noviantoni Jauhari, S.Pd",
+    role: "Guru Bahasa Inggris / BKK",
+    birthPlace: "Madiun",
+    birthDate: "14 November 1981",
+    nbmNuptk: "1228362 / 6446759662200003",
+    education: "S1 Bahasa Inggris",
+    photo: "/photos/guru/noviantoni.png",
+  },
+  {
+    id: "guru-siti-kholifah",
+    name: "Siti Kholifah, S.Pd",
+    role: "Guru PKN & Sejarah",
+    birthPlace: "Ponorogo",
+    birthDate: "07 Juli 1982",
+    nbmNuptk: "1035510 / 0140743645200023",
+    education: "S1 PKN",
+    photo: "/photos/guru/siti.png",
+  },
+  {
+    id: "guru-sulthan",
+    name: "Sulthan Abdul Hakim, S.Pd",
+    role: "Guru Bahasa Indonesia",
+    birthPlace: "Madiun",
+    birthDate: "17 Oktober 1990",
+    nbmNuptk: "-",
+    education: "S1 Pendidikan Bahasa Indonesia",
+    photo: "/photos/guru/sulthan.png",
+  },
+  {
+    id: "guru-suwito",
+    name: "Suwito, S.T.",
+    role: "Guru Produktif TBSM",
+    birthPlace: "Magetan",
+    birthDate: "07 Januari 1990",
+    nbmNuptk: "1144482 / 7744768669130152",
+    education: "S1 Teknik Mesin",
+    photo: "/photos/guru/suwito.png",
+  },
+  {
+    id: "guru-ridho",
+    name: "Muslikh Ridho Wiyan Rahmad Gumelar, S.Pd",
+    role: "Guru Produktif TKRO",
+    birthPlace: "-",
+    birthDate: "-",
+    nbmNuptk: "1386385",
+    education: "S1 Teknik Mesin",
+    photo: "/photos/man.png",
+  },
+  {
+    id: "guru-rosalia",
+    name: "Rosalia April Yanti, S.Pd",
+    role: "Guru Seni Budaya",
+    birthPlace: "Madiun",
+    birthDate: "12 April 2000",
+    education: "S1 Seni Tari",
+    photo: "/photos/guru/rosalia.png",
+  },
+  {
+    id: "guru-nakita",
+    name: "Nakita Intan Aulia, S.Pd",
+    role: "Guru Bahasa Indonesia",
+    birthPlace: "Madiun",
+    birthDate: "05 Juni 2000",
+    education: "S1 Bahasa Indonesia",
+    photo: "/photos/guru/nakita.png",
+  },
+  {
+    id: "guru-dimas",
+    name: "Dimas Angga Widjaya, S.Pd",
+    role: "Guru Produktif TKRO",
+    birthPlace: "Madiun",
+    birthDate: "07 Maret 1997",
+    nbmNuptk: "1386365",
+    education: "S1 Teknik Mesin",
+    photo: "/photos/kesiswaan/pokja-kesiswaan1.png",
+  },
+  {
+    id: "guru-gilang",
+    name: "Muhammad Gilang Prasetiyo Budi, S.Kom",
+    role: "Guru Produktif DKV",
+    birthPlace: "Ponorogo",
+    birthDate: "01 April 1997",
+    nbmNuptk: "-",
+    education: "S1 Teknik Informatika",
+    photo: "/photos/guru/gilang.png",
+  },
+  {
+    id: "guru-desy",
+    name: "Desy Risna Krisnayanti, S.Pd",
+    role: "Guru Produktif Busana",
+    birthPlace: "Madiun",
+    birthDate: "10 Desember 1988",
+    nbmNuptk: "-",
+    education: "S1 Pendidikan Tata Busana",
+    photo: "/photos/guru/desy.png",
+  },
+  {
+  id: "guru-chesyar",
+  name: "Chesyar Bhima Aprillian Dartin Putra Uthama, M.Pd",
+  role: "Guru Produktif TKRO",
+  birthPlace: "Madiun",
+  birthDate: "09 April 1997",
+  nbmNuptk: "-",
+  education: "S2 Pendidikan Teknik Otomotif",
+  photo: "/photos/guru/chesyar.png",
+},
+{
+  id: "guru-dawatul",
+  name: "Da'watul Anis Ma'rufah, M.Psi",
+  role: "Guru BP/BK",
+  birthPlace: "Madiun",
+  birthDate: "24 November 1994",
+  nbmNuptk: "-",
+  education: "S2 Psikologi",
+  photo: "/photos/guru/dawatul.png",
+},
+{
+  id: "guru-rengga",
+  name: "Rengga Setya Widodo, S.Pd",
+  role: "Guru BP/BK",
+  birthPlace: "Madiun",
+  birthDate: "08 November 1993",
+  nbmNuptk: "-",
+  education: "S1 BP/BK",
+  photo: "/photos/guru/rengga.png",
+},
+{
+  id: "guru-ado",
+  name: "Muhammad Ado Rizqi Mardhaditya, S.Pd",
+  role: "Guru Bahasa Inggris",
+  birthPlace: "Ponorogo",
+  birthDate: "12 Februari 1996",
+  nbmNuptk: "-",
+  education: "S1 Bahasa Inggris",
+  photo: "/photos/guru/ado.png",
+},
+  {
+    id: "guru-maya",
+    name: "Maya Sari, S.Pd",
+    role: "Guru Bahasa Inggris",
+    birthPlace: "Ponorogo",
+    birthDate: "24 Februari 1991",
+    education: "S1 Bahasa Inggris",
+    photo: "/photos/guru/maya.png",
+  },
+  {
+    id: "guru-wahyu",
+    name: "Wahyu Setyaningsih, S.Pd",
+    role: "Guru Matematika",
+    birthPlace: "Madiun",
+    birthDate: "18 Februari 1990",
+    education: "S1 Matematika",
+    photo: "/photos/guru/setyaningsih.png",
+  },
+  {
+    id: "guru-indah",
+    name: "Indah Dwi Winarsih, S.Pd",
+    role: "Guru Penjaskes",
+    birthPlace: "Madiun",
+    birthDate: "10 Juni 1993",
+    education: "S1 Penjaskes",
+    photo: "/photos/woman.png",
+  },
+  {
+    id: "guru-mei",
+    name: "Mei Lika Ifa Murdiansari, S.Kom",
+    role: "Guru Produktif DKV",
+    birthPlace: "Madiun",
+    birthDate: "29 Mei 1994",
+    education: "S1 Teknik Informatika",
+    photo: "/photos/woman.png",
+  },
+];
 
 /* ==============================
    EXPORT BUNDLE
@@ -247,6 +520,6 @@ export const GURU: Record<string, Person[]> = {
 export const SCHOOL_STAFF = {
   headmaster: HEADMASTER,
   waka: WAKA,
-  tataUsaha: TATA_USAHA,
+  tataUsaha: TU_STAFF,
   guru: GURU,
 };
