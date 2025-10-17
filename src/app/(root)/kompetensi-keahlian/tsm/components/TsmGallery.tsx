@@ -1,0 +1,41 @@
+"use client";
+
+import Image from "next/image";
+
+const GALLERY = [
+  { src: "/images/tsm/mou-honda.png", caption: "Kerja sama dengan PT Astra Honda Motor" },
+  { src: "/images/tsm/teaching-factory.png", caption: "Bengkel Teaching Factory TSM" },
+  { src: "/images/tsm/oltek-service.png", caption: "Praktik servis sepeda motor oleh siswa" },
+  { src: "/images/tsm/oltek-service2.png", caption: "Layanan Oltek Service Gratis untuk masyarakat" },
+  { src: "/images/tsm/smk-rujukan.png", caption: "TSM sebagai SMK Rujukan Nasional" },
+];
+
+export default function TsmGallery() {
+  return (
+    <section className="mt-20">
+      <h2 className="text-2xl font-semibold text-gray-900 text-center mb-8">
+        Galeri Kegiatan TSM
+      </h2>
+
+      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+        {GALLERY.map((item, i) => (
+          <div
+            key={i}
+            className="overflow-hidden rounded-xl shadow-md bg-white hover:shadow-xl transition"
+          >
+            <Image
+              src={item.src}
+              alt={item.caption}
+              width={600}
+              height={400}
+              className="w-full h-48 object-cover"
+            />
+            <p className="p-3 text-center text-sm text-gray-700">
+              {item.caption}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
