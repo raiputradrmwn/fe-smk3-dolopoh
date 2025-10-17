@@ -52,9 +52,6 @@ export default function Navbar() {
                     <Link href="/profil/sekolah">Profil Sekolah</Link>
                   </MenubarItem>
                   <MenubarItem asChild>
-                    <Link href="/profil/visi-misi">Visi &amp; Misi</Link>
-                  </MenubarItem>
-                  <MenubarItem asChild>
                     <Link href="/profil/struktur">Struktur Organisasi</Link>
                   </MenubarItem>
                   <MenubarSeparator />
