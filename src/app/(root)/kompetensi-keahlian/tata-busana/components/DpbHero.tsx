@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
-
+import Image from "next/image";
 export default function DpbHero() {
   const [isPlaying, setIsPlaying] = useState(false);
 
@@ -24,7 +24,15 @@ export default function DpbHero() {
         Membangun kreativitas dan keterampilan di bidang fesyen, membatik, dan
         wirausaha busana yang berdaya saing.
       </p>
-
+      <div className="mt-10 flex justify-center">
+        <Image
+          src="/dpb.png"
+          alt="Logo Program Keahlian DKV"
+          width={180}
+          height={180}
+          className="object-contain drop-shadow-lg"
+        />
+      </div>
       <div className="mt-10 flex justify-center">
         {!isPlaying ? (
           <div

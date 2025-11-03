@@ -3,7 +3,6 @@ import SchoolOverview from "./components/SchoolOverview";
 import CompetencyList from "./components/CompetencyList";
 import VisionMissionTabs from "./components/VisionMissionTabs";
 import CooperationSection from "./components/CooperationSection";
-
 import ProfileCTA from "./components/ProfileCTA";
 
 

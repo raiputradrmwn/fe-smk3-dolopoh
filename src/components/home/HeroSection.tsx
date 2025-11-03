@@ -11,7 +11,6 @@ export default function Hero() {
     <section className="w-full">
       <div className="mx-auto max-w-7xl px-4 py-10 md:py-16 lg:py-30">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2">
-          {/* LEFT TEXT */}
           <div className="order-2 lg:order-1">
             <h1 className="text-3xl font-bold leading-tight text-gray-900 md:text-5xl lg:text-[50px] lg:leading-[1.15]">
               Selamat Datang di{" "}
@@ -29,7 +28,7 @@ export default function Hero() {
                 asChild
                 className="h-11 bg-teal-600 px-6 text-white hover:bg-teal-700"
               >
-                <Link href="/informasi/ppdb">Daftar Sekarang</Link>
+                <Link href="/pendaftaran">Daftar Sekarang</Link>
               </Button>
 
               <Button
@@ -46,7 +45,7 @@ export default function Hero() {
           <div className="order-1 lg:order-2">
             <AspectRatio ratio={16 / 9}>
               <Image
-                src="/smk.png"
+                src="/smk.jpg"
                 alt="Image"
                 fill
                 className="rounded-md object-cover"

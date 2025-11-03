@@ -1,7 +1,7 @@
 "use client";
 
 import { Badge } from "@/components/ui/badge";
-
+import Image from "next/image";
 export default function TkrHero() {
   return (
     <section className="text-center">
@@ -15,6 +15,15 @@ export default function TkrHero() {
         Jurusan unggulan SMK Muhammadiyah 3 Dolopo dengan akreditasi A dan
         kemitraan industri nasional.
       </p>
+      <div className="mt-10 flex justify-center">
+        <Image
+          src="/tkrlogo.png"
+          alt="Logo Program Keahlian DKV"
+          width={180}
+          height={180}
+          className="object-contain drop-shadow-lg"
+        />
+      </div>
     </section>
   );
 }

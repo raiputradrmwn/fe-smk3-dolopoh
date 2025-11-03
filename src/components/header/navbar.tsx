@@ -9,9 +9,6 @@ import {
   MenubarItem,
   MenubarMenu,
   MenubarSeparator,
-  MenubarSub,
-  MenubarSubContent,
-  MenubarSubTrigger,
   MenubarTrigger,
   MenubarRadioGroup,
   MenubarRadioItem,
@@ -96,27 +93,13 @@ export default function Navbar() {
                   </MenubarItem>
                 </MenubarContent>
               </MenubarMenu>
-
-              {/* INFORMASI */}
               <MenubarMenu>
                 <MenubarTrigger className="gap-1 text-sm font-medium text-gray-700 hover:bg-transparent focus:bg-transparent data-[state=open]:bg-transparent">
                   Informasi <ChevronDown className="h-4 w-4 opacity-70" />
                 </MenubarTrigger>
                 <MenubarContent align="start" sideOffset={10}>
-                  <MenubarRadioGroup value="semua">
-                    <MenubarRadioItem value="semua">Semua</MenubarRadioItem>
-                    <MenubarRadioItem value="pengumuman">
-                      Pengumuman
-                    </MenubarRadioItem>
-                    <MenubarRadioItem value="berita">Berita</MenubarRadioItem>
-                  </MenubarRadioGroup>
-                  <MenubarSeparator />
-                  <MenubarCheckboxItem checked>
-                    Tampilkan Arsip
-                  </MenubarCheckboxItem>
-                  <MenubarSeparator />
                   <MenubarItem asChild>
-                    <Link href="/informasi/ppdb">PPDB</Link>
+                    <Link href="/pendaftaran">Info Pendaftaran</Link>
                   </MenubarItem>
                 </MenubarContent>
               </MenubarMenu>
