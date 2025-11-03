@@ -14,7 +14,6 @@ export default function ContactSection() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setLoading(true);
-    // TODO: kirim ke API/email service sekolah
     setTimeout(() => setLoading(false), 900);
   }
 
