@@ -57,7 +57,7 @@ export default function RegistrationPage() {
       alert("✅ Pendaftaran berhasil dikirim!");
       (e.target as HTMLFormElement).reset();
       setDob(undefined);
-    } catch (err: any) {  
+    } catch (err) {  
       console.error(err);
     } finally {
       setSubmitting(false);
