@@ -62,16 +62,24 @@ export default function Navbar() {
                 </MenubarTrigger>
                 <MenubarContent align="start" sideOffset={10}>
                   <MenubarItem asChild>
-                    <Link href="/kompetensi-keahlian/tkro">Teknik Kendaraan Ringan Otomotif</Link>
+                    <Link href="/kompetensi-keahlian/tkro">
+                      Teknik Kendaraan Ringan Otomotif
+                    </Link>
                   </MenubarItem>
                   <MenubarItem asChild>
-                    <Link href="/kompetensi-keahlian/dkv">Desain Komunikasi Visual/Komputer</Link>
+                    <Link href="/kompetensi-keahlian/dkv">
+                      Desain Komunikasi Visual/Komputer
+                    </Link>
                   </MenubarItem>
                   <MenubarItem asChild>
-                    <Link href="/kompetensi-keahlian/tsm">Teknik Bisnis Sepeda Motor</Link>
+                    <Link href="/kompetensi-keahlian/tsm">
+                      Teknik Bisnis Sepeda Motor
+                    </Link>
                   </MenubarItem>
                   <MenubarItem asChild>
-                    <Link href="/kompetensi-keahlian/tata-busana">Tata Busana</Link>
+                    <Link href="/kompetensi-keahlian/tata-busana">
+                      Tata Busana
+                    </Link>
                   </MenubarItem>
                 </MenubarContent>
               </MenubarMenu>
@@ -100,6 +108,9 @@ export default function Navbar() {
                 <MenubarContent align="start" sideOffset={10}>
                   <MenubarItem asChild>
                     <Link href="/pendaftaran">Info Pendaftaran</Link>
+                  </MenubarItem>
+                  <MenubarItem asChild>
+                    <Link href="/berita">Berita</Link>
                   </MenubarItem>
                 </MenubarContent>
               </MenubarMenu>
