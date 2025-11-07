@@ -39,7 +39,7 @@ export async function POST(req: Request) {
       success: true,
       message: "Pesan berhasil dikirim. Kami akan segera membalas.",
     });
-  } catch (error: any) {
+  } catch (error) {
     console.error(error);
     return NextResponse.json(
       { success: false, message: "Gagal mengirim email." },

@@ -31,8 +31,8 @@ export default function ContactSection() {
 
       toast.success(data.message || "Pesan berhasil dikirim!");
       form.reset();
-    } catch (err: any) {
-      toast.error(err.message || "Terjadi kesalahan saat mengirim pesan.");
+    } catch (err) {
+      toast.error(err instanceof Error ? err.message : "Terjadi kesalahan. Silakan coba lagi.");
     } finally {
       setLoading(false);
     }
