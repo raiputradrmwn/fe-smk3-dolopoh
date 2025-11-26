@@ -27,11 +27,14 @@ export default function ContactSection() {
 
       const data = await res.json();
 
-      if (!res.ok) throw new Error(data.message);
+      if (!res.ok) {
+        throw new Error(data.message || "Gagal mengirim pesan.");
+      }
 
       toast.success(data.message || "Pesan berhasil dikirim!");
       form.reset();
     } catch (err) {
+      console.error(err);
       toast.error(err instanceof Error ? err.message : "Terjadi kesalahan. Silakan coba lagi.");
     } finally {
       setLoading(false);
