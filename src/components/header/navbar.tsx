@@ -8,11 +8,7 @@ import {
   MenubarContent,
   MenubarItem,
   MenubarMenu,
-  MenubarSeparator,
   MenubarTrigger,
-  MenubarRadioGroup,
-  MenubarRadioItem,
-  MenubarCheckboxItem,
 } from "@/components/ui/menubar";
 import { Input } from "@/components/ui/input";
 import { Search, ChevronDown } from "lucide-react";
@@ -111,6 +107,9 @@ export default function Navbar() {
                   </MenubarItem>
                   <MenubarItem asChild>
                     <Link href="/berita">Berita</Link>
+                  </MenubarItem>
+                  <MenubarItem asChild>
+                    <Link href="/karir">Info Karir</Link>
                   </MenubarItem>
                 </MenubarContent>
               </MenubarMenu>
