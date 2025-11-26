@@ -1,12 +1,22 @@
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
+import type { ContactFormRequest, ContactFormResponse } from "./types";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = process.env.RESEND_API_KEY
+  ? new Resend(process.env.RESEND_API_KEY)
+  : null;
 
 export async function POST(req: Request) {
   try {
-    const body = await req.json();
+    if (!resend) {
+      console.error("RESEND_API_KEY is missing");
+      return NextResponse.json(
+        { success: false, message: "Server configuration error: Missing API Key." },
+        { status: 500 }
+      );
+    }
 
+    const body: ContactFormRequest = await req.json();
     const { name, email, origin, topic, subject, message } = body;
 
     if (!name || !email || !subject || !message) {
@@ -16,7 +26,14 @@ export async function POST(req: Request) {
       );
     }
 
-    const schoolEmail = process.env.SCHOOL_EMAIL!;
+    const schoolEmail = process.env.SCHOOL_EMAIL;
+    if (!schoolEmail) {
+       console.error("SCHOOL_EMAIL is missing");
+       return NextResponse.json(
+        { success: false, message: "Server configuration error: Missing School Email." },
+        { status: 500 }
+      );
+    }
 
     await resend.emails.send({
       from: `Form Kontak SMK M3 Dolopo <onboarding@resend.dev>`,
@@ -31,6 +48,7 @@ export async function POST(req: Request) {
         <p><strong>Topik:</strong> ${topic}</p>
         <hr />
         <p><strong>Pesan:</strong></p>
+        <p><strong>${subject}</strong></p>
         <p>${message}</p>
       `,
     });
