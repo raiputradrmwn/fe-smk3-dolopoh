@@ -5,8 +5,8 @@ import Navbar from "@/components/header/navbar";
 import SiteFooter from "@/components/footer/SiteFooter";
 import { Toaster } from "sonner";
 export const metadata: Metadata = {
-  title: "SMK 3 Dolopoh",
-  description: "SMK 3 Dolopoh",
+  title: "SMK 3 Dolopo",
+  description: "SMK 3 Dolopo",
 };
 
 export default function RootLayout({
