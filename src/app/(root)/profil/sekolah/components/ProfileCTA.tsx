@@ -10,21 +10,21 @@ export default function ProfileCTA() {
         asChild
         className="rounded-full bg-teal-600 px-6 py-6 text-white hover:bg-teal-700"
       >
-        <Link href="/informasi/ppdb">Daftar PPDB</Link>
+        <Link href="/pendaftaran">Daftar PPDB</Link>
       </Button>
       <Button
         asChild
         variant="outline"
         className="rounded-full border-teal-500 text-teal-700"
       >
-        <Link href="/informasi/berita">Lihat Berita Sekolah</Link>
+        <Link href="/berita">Lihat Berita Sekolah</Link>
       </Button>
       <Button
         asChild
         variant="ghost"
         className="rounded-full text-teal-700 hover:bg-teal-50"
       >
-        <Link href="/kontak">Hubungi Kami</Link>
+        <Link href="/">Hubungi Kami</Link>
       </Button>
     </div>
   );
