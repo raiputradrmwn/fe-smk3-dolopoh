@@ -37,7 +37,7 @@ export default function NewsSection({
             asChild
             className="bg-teal-600 px-8 py-5 text-white hover:bg-teal-700"
           >
-            <Link href="/informasi/berita">Lihat Semua</Link>
+            <Link href="/berita">Lihat Semua</Link>
           </Button>
         </div>
       </div>
