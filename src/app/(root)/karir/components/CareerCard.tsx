@@ -46,9 +46,9 @@ export function CareerCard({ career }: { career: Career }) {
 
         </CardHeader>
         <CardContent className="p-4 pt-2">
-          <p className="text-sm text-gray-600 line-clamp-3">
+          <div className="text-sm text-gray-600 line-clamp-3">
             <div dangerouslySetInnerHTML={{ __html: career.job_description }} />
-          </p>
+          </div>
         </CardContent>
       </Card>
     </Link>
