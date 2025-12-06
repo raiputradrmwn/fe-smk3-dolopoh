@@ -141,7 +141,7 @@ export default function NavbarMobile() {
                 </AccordionTrigger>
                 <AccordionContent className="px-2 pb-2">
                   <NavLink href="/berita">Berita</NavLink>
-                  <NavLink href="/pengumuman">Pengumuman</NavLink>
+                  <NavLink href="/pendaftaran">Pendaftaran</NavLink>
                   <NavLink href="/karir">Karir</NavLink>
                 </AccordionContent>
               </AccordionItem>
