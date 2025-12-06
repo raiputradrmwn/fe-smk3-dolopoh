@@ -1,13 +1,11 @@
 import axios from "axios";
 import type { NewsDetailResponse, NewsListResponse } from "./types";
 
-// 🔹 Axios instance — base URL diambil dari .env
 const api = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },
-  timeout: 10000,
 });
 
 // 🔹 Ambil semua berita (pagination default 10)

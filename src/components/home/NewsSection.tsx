@@ -2,16 +2,34 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import type { NewsListResponse } from "@/app/api/news/types";
+import { useEffect, useState } from "react";
+import { getLatestNews } from "@/app/api/news/api";
+import type { News } from "@/app/api/news/types";
 import { NewsCard } from "@/app/(root)/berita/components/NewsCard";
+import { Skeleton } from "@/components/ui/skeleton";
 
+export default function NewsSection() {
+  const [newsData, setNewsData] = useState<News[]>([]);
+  const [loading, setLoading] = useState(true);
 
-export default function NewsSection({
-  data,
-}: {
-  data: NewsListResponse["data"];
-}) {
-  const newsData = data.data.slice(0, 3);
+  useEffect(() => {
+    const fetchNews = async () => {
+      try {
+        const res = await getLatestNews();
+        if (res?.data?.data && Array.isArray(res.data.data)) {
+          setNewsData(res.data.data.slice(0, 3));
+        } else {
+          setNewsData([]);
+        }
+      } catch (error) {
+        console.error("Failed to fetch news:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchNews();
+  }, []);
 
   return (
     <section className="w-full bg-white py-16">
@@ -26,9 +44,18 @@ export default function NewsSection({
 
         {/* News Cards */}
         <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {newsData.map((news) => (
-            <NewsCard key={news.id} news={news} />
-          ))}
+          {loading
+            ? Array.from({ length: 3 }).map((_, i) => (
+              <div key={i} className="flex flex-col space-y-3">
+                <Skeleton className="h-48 w-full rounded-xl" />
+                <div className="space-y-2">
+                  <Skeleton className="h-4 w-1/2" />
+                  <Skeleton className="h-4 w-full" />
+                  <Skeleton className="h-4 w-full" />
+                </div>
+              </div>
+            ))
+            : newsData.map((news) => <NewsCard key={news.id} news={news} />)}
         </div>
 
         {/* Button */}
