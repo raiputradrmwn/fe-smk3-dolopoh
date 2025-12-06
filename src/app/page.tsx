@@ -6,14 +6,17 @@ import VideoSection from "@/components/home/VideoSection";
 
 
 
+
+export const dynamic = "force-dynamic";
+
 export default function HomePage() {
   return (
     <main>
-      <HeroSection/>
-      <HomeNewsWrapper/>
-      <VideoSection/>
-      <KompetensiSection/>
-      <ContactSection/>
+      <HeroSection />
+      <HomeNewsWrapper />
+      <VideoSection />
+      <KompetensiSection />
+      <ContactSection />
     </main>
   );
 }

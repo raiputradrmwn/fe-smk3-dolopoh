@@ -36,6 +36,7 @@ export interface NewsDetail {
   id: string;
   title: string;
   content: string;
+  headline: string;
   photo: string;
   status: string;
   created_at: string;

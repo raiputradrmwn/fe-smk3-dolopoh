@@ -1,3 +1,4 @@
+"use client";
 import { getLatestNews } from "@/app/api/news/api";
 import NewsSection from "@/components/home/NewsSection";
 

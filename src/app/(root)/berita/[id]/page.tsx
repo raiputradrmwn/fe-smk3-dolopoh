@@ -11,10 +11,19 @@ interface Props {
   params: { id: string };
 }
 
-export default async function NewsDetailPage({ params }: Props) {
+export default async function NewsDetailPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   try {
-    const res = await getNewsById(params.id);
+    const res = await getNewsById(id);
     const news = res.data;
+
+    // Validate news data
+    if (!news) {
+      console.error(`News with id ${id} not found in response`, res);
+      notFound();
+    }
+
+
 
     return (
       <main className="mx-auto max-w-4xl px-4 py-12">
@@ -41,7 +50,7 @@ export default async function NewsDetailPage({ params }: Props) {
 
           <div className="flex justify-center items-center gap-2 text-sm text-gray-500">
             <CalendarDays className="h-4 w-4" />
-            <span>
+            <span suppressHydrationWarning>
               {format(new Date(news.created_at), "EEEE, dd MMMM yyyy", {
                 locale: localeID,
               })}
