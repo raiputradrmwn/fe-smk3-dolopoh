@@ -140,26 +140,12 @@ export default function NavbarMobile() {
                   Informasi
                 </AccordionTrigger>
                 <AccordionContent className="px-2 pb-2">
-                  <NavLink href="/informasi/berita">Berita</NavLink>
-                  <NavLink href="/informasi/pengumuman">Pengumuman</NavLink>
-                  <NavLink href="/informasi/ppdb">PPDB</NavLink>
-                  <NavLink href="/informasi/arsip">Arsip</NavLink>
+                  <NavLink href="/berita">Berita</NavLink>
+                  <NavLink href="/pengumuman">Pengumuman</NavLink>
+                  <NavLink href="/karir">Karir</NavLink>
                 </AccordionContent>
               </AccordionItem>
             </Accordion>
-
-            {/* Link cepat (opsional) */}
-            <div className="mt-3 px-2">
-              <Separator className="my-3" />
-              <SheetClose asChild>
-                <Link
-                  href="/kontak"
-                  className="block rounded-md bg-teal-600 px-4 py-2 text-center text-white"
-                >
-                  Hubungi Kami
-                </Link>
-              </SheetClose>
-            </div>
           </nav>
         </SheetContent>
       </Sheet>
